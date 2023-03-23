@@ -56,7 +56,10 @@ function newGame(icon, name) {
     gameArr.push(newGame)
 }
 newGame('./gameFiles/Crossy Road.png', 'Crossy Road')
-newGame('./gameFiles/Crossy Road.png', 'Crossy Road')
+newGame('./gameFiles/weddle.jpg', 'Weddle')
+newGame('./gameFiles/vollyrandom.png', 'Volley Random')
+newGame('./gameFiles/Boxing Random.jpg', 'Boxing Random')
+newGame('./gameFiles/Basket Random.png', 'Basket Random')
 
 
 

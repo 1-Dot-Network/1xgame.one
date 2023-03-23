@@ -1,31 +1,40 @@
-<!--
-Game Bootstrapper
-
-@author Kasper Mol <kasper@poki.com>
-@copyright Poki 2017
--->
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta charset="UTF-8" />
+    <title>Boxing Random | 1x</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
 
-    <title>Crossy Road | 1xGames</title>
+    <meta name="generator" content="Scirra Construct" />
+    <meta name="author" content="3kh0" />
+    <link rel="manifest" href="appmanifest.json" />
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" async href="app-store-interstitial.css" />
-
-    <script src="scripts/extra.min.js"></script>
-    <script src="poki-sdk.js"></script>
   </head>
   <body>
-    <script src="scripts/bootstrap.min.js"></script>
+    <script>
+      if (location.protocol.substr(0, 4) === "file") {
+        alert("Web exports won't work until you upload them. (When running on the file: protocol, browsers block many features from working for security reasons.)");
+      }
+    </script>
+    <script src="box2d.wasm.js"></script>
     <script src="/js/main.js"></script>
+    <noscript>
+      <div id="notSupportedWrap">
+        <h2 id="notSupportedTitle">This content requires JavaScript</h2>
+        <p class="notSupportedMessage">JavaScript appears to be disabled. Please enable it to view this content.</p>
+      </div>
+    </noscript>
+    <script src="scripts/supportcheck.js"></script>
+    <script src="scripts/offlineclient.js" type="module"></script>
+    <script src="scripts/main.js" type="module"></script>
+    <script src="scripts/register-sw.js" type="module"></script>
+    <!-- Full file list: offline.json -->
   </body>
   <script>
     switch (localStorage.getItem('Tab Spoof')) {
         case 'Off':
-            document.title = 'Crossy Road | 1x'
+            document.title = 'Boxing Random | 1x'
             break
         case 'New Tab':
             document.title = 'New Tab'
